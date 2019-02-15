@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EJERCICIOS</title>
+    <meta name="author" content="Bryan Argandoña">
+    <meta name="description" content="Ejercicios para avantica">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' href='assets/img/favicon.ico' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-sm-3">
+                <h1>EJERCICIOS</h1>
+                <img src="assets/img/excellent.png" alt="">
+                <div class="nav flex-column nav-pills mt-3" id="v-pills-tab" role="tablist">
+                    <a class="nav-link active" id="v-pills-primeNumbers-tab" data-toggle="pill" href="#v-pills-primeNumbers"
+                        role="tab">1.
+                        Numeros
+                        Primos</a>
+                    <a class="nav-link" id="v-pills-palindromos-tab" data-toggle="pill" href="#v-pills-palindromos"
+                        role="tab">2.
+                        Palindromos</a>
+                    <a class="nav-link" id="v-pills-mayusMinus-tab" data-toggle="pill" href="#v-pills-mayusMinus" role="tab">3.
+                        Mayusculas o Minusculas</a>
+                    <a class="nav-link" id="v-pills-factoriales-tab" data-toggle="pill" href="#v-pills-factoriales"
+                        role="tab">4.
+                        Factoriales</a>
+                    <a class="nav-link" id="v-pills-diasFechas-tab" data-toggle="pill" href="#v-pills-diasFechas" role="tab">5.
+                        Dias entre Fechas</a>
+                    <a class="nav-link" id="v-pills-convFechas-tab" data-toggle="pill" href="#v-pills-convFechas" role="tab">6.
+                        Formato de fechas</a>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!--NUMEROS PRIMOS-->
+                    <div class="tab-pane fade show active" id="v-pills-primeNumbers" role="tabpanel">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2>Numeros Primos o Compuestos</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <p class="text-justify"><b>NUMERO PRIMO:</b> Un número primo es un número entero con
+                                    exactamente dos
+                                    divisores
+                                    integrales, 1 y el número mismo.</p>
+                                <p class="text-justify"><b>NUMERO COMPUESTO:</b> Un número compuesto es un número
+                                    entero con más de dos
+                                    divisores
+                                    integrales.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <form method="POST" id="formPrimos" action="controllers/ejercicio1.php">
+                                    <div class="form-group">
+                                        <hr>
+                                        <input type="text" class="form-control" name="input" placeholder="Ingresa un numero entero positivo de maximo 9 Digitos"
+                                            maxlength="9" size="9" required autofocus>
+                                    </div>
+                                    <button type="submit" class="btn btn-info" id="btnPrimos">Verificar</button>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <div id="resultadoPrimos"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--PALINDROMOS-->
+                    <div class="tab-pane fade" id="v-pills-palindromos" role="tabpanel">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2>Palíndromos</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <p class="text-justify"><b>PALINDROMO:</b> Un palíndromo (del griego palin dromein,
+                                    volver a ir
+                                    atrás), también llamado palindromo,
+                                    palíndroma o palindroma, es una palabra, número o frase que se lee igual adelante
+                                    que atrás.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <form method="POST" id="formPalindromos" action="controllers/ejercicio2.php">
+                                    <div class="form-group">
+                                        <hr>
+                                        <input type="text" class="form-control" name="input" placeholder="Ingresa un numero, frase o palabra palindroma"
+                                            required>
+                                    </div>
+                                    <button type="submit" class="btn btn-info" id="btnPalindromo">Verificar</button>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <div id="resultadoPalindromos"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--MAYUSCULAS-->
+                    <div class="tab-pane fade" id="v-pills-mayusMinus" role="tabpanel">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2>Mayusculas o Minusculas</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <p class="text-justify"><b>EJERCICIO:</b> Verificar si una cadena esta todo en
+                                    mayuscula o minuscula!</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <form method="POST" id="formMayusMinus" action="controllers/ejercicio3.php">
+                                    <div class="form-group">
+                                        <hr>
+                                        <input type="text" class="form-control" name="input" placeholder="Ingresa un palabra o oracion"
+                                            required>
+                                    </div>
+                                    <button type="submit" class="btn btn-info" id="btnMayusMinus">Verificar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <p id="resultadoMayusMinus"></p>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--FACTORIAL-->
+                    <div class="tab-pane fade" id="v-pills-factoriales" role="tabpanel">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2>Factoriales</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <p class="text-justify"><b>FACTORIAL:</b> Cantidad que resulta de la multiplicación de
+                                    determinado número natural por
+                                    todos los números naturales que le anteceden excluyendo el cero.
+                                    "El factorial de 4 es 24 (producto de 4 x 3 x 2 x 1)"</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <form method="POST" id="formfactoriales" action="controllers/ejercicio4.php">
+                                    <div class="form-group">
+                                        <hr>
+                                        <input type="number" class="form-control" name="input" placeholder="Ingresa un numero entero positivo (VALOR MAXIMO 170)"
+                                            max="170" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-info" id="btnfactoriales">Calcular</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <div id="resultadofactoriales"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--DIAS FECHAS-->
+                    <div class="tab-pane fade" id="v-pills-diasFechas" role="tabpanel">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2>Dias entre 2 Fechas</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <p class="text-justify"><b>EJERCICIO:</b> Calcular los dias totales entre 2 fechas
+                                    ingresadas!</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <form method="POST" id="formdiasFechas" action="controllers/ejercicio5.php">
+                                    <div class="form-group">
+                                        <hr>
+                                        <label for="diasFechas1">Fecha #1</label>
+                                        <input type="date" class="form-control" name="date1" required>
+
+                                        <label for="diasFechas2" class="mt-3">Fecha #2</label>
+                                        <input type="date" class="form-control" name="date2" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-info" id="btndiasFechas">Calcular</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <div id="resultadodiasFechas"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--CONVERSION DE FECHAS-->
+                    <div class="tab-pane fade" id="v-pills-convFechas" role="tabpanel">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2>Formato de Fechas</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <p class="text-justify"><b>EJERCICIO:</b> Cambiar el Formato de una fecha USA a una
+                                    latina.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <form method="POST" id="formconvFechas" action="controllers/ejercicio6.php">
+                                    <div class="form-group">
+                                        <hr>
+                                        <input type="date" class="form-control" name="input" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-info" id="btnconvFechas">Convertir</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <div id="resultadoconvFechas"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loading-screen" class="text-center"><img src="assets/img/ajax-loader.gif" class="loading-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loading-screen" class="text-center"><img src="assets/img/ajax-loader.gif" class="loading-spinner"></div>
+
+    </div>
+    <script src="assets/js/main.js"></script>
+    <!--BOOTSTRAP JS 4-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
